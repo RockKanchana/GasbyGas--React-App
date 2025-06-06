@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5; /* Light gray background */
+}
+
+/* src/index.css */
+@keyframes borderGlow {
+  0% {
+    transform: translateX(-100%) translateY(0);
+  }
+  25% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(0) translateY(100%);
+  }
+  75% {
+    transform: translateX(-100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(-100%) translateY(0);
+  }
+}
+
+.animate-border-glow {
+  position: absolute;
+  box-shadow: 0 0 10px 2px rgba(0, 144, 255, 0.8);
+  animation: borderGlow 3s linear infinite;
+}
